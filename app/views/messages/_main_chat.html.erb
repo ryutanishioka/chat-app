@@ -5,26 +5,7 @@
   </div>
 </div>
 <div class = "chat-center">
-  <div class = "chat-content">
-    <div class = "message-name-day">
-      <div class = "message-name">Tom
-      </div>
-      <div class = "message-day">2022/06/07 20:00:25
-      </div>
-    </div>
-    <div class = "message-content">おはよう
-    </div>
-  </div>
-  <div class = "chat-content">
-    <div class = "message-name-day">
-      <div class = "message-name">Tom
-      </div>
-      <div class = "message-day">2022/06/07 20:14:25
-      </div>
-    </div>
-    <div class = "message-content">こんばんは
-    </div>
-  </div>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 
 
