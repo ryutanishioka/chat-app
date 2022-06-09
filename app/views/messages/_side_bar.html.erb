@@ -3,41 +3,16 @@
     <%= link_to current_user.name, edit_user_path(current_user)%>
   </div>
   <div class = "create-chatroom">
-    <a href = "#">チャットを作成する</a>
+    <%= link_to "チャットを作成する", new_room_path %>
   </div>
 </div>
 
 <div class = "chatrooms">
-  <div class = "chatroom">
-    <div class = "room-name">
-      <a href = "#">techtoom1</a>
+  <% current_user.rooms.each do |room| %>
+    <div class = "chatroom">
+      <div class = "room-name">
+        <a href = "#"><%= room.name %></a>
+      </div>
     </div>
-    <div class = "room-name">
-      <a href = "#">techtoom2</a>
-    </div>
-    <div class = "room-name">
-      <a href = "#">techtoom3</a>
-    </div>
-    <div class = "room-name">
-      <a href = "#">techtoom4</a>
-    </div>
-    <div class = "room-name">
-      <a href = "#">techtoom5</a>
-    </div>
-    <div class = "room-name">
-      <a href = "#">techtoom6</a>
-    </div>
-    <div class = "room-name">
-      <a href = "#">techtoom7</a>
-    </div>
-    <div class = "room-name">
-      <a href = "#">techtoom8</a>
-    </div>
-    <div class = "room-name">
-      <a href = "#">techtoom9</a>
-    </div>
-    <div class = "room-name">
-      <a href = "#">techtoom10</a>
-    </div>
-  </div>
+  <% end %>
 </div>
